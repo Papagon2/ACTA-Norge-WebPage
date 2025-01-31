@@ -4,13 +4,14 @@ html, body {
     margin: 0%;
 }
 
-#header-container > img {
-    width: 100%;
+#header-container {
+    
     
 }
 
-.header-img {
-    
+.header-img > img {
+    max-width: 100%;
+    height: auto;
     
 }
 
