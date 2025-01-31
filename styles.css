@@ -1,4 +1,40 @@
 html, body {
     background-color: #303030;
     color: aliceblue;
+    margin: 0%;
 }
+
+#header-container > img {
+    width: 100%;
+    
+}
+
+.header-img {
+    
+    
+}
+
+.header-text {
+
+position: absolute;
+
+}
+
+#nav-container {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+    margin-top: -0.5%;
+
+
+}
+
+.nav-bar > p >  a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    
+
+}
+
