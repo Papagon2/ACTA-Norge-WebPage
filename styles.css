@@ -53,8 +53,12 @@ html, body {
 }
 
 .joinus-text {
+    margin-top: 5%;
+}
+
+.joinus-text > a {
     color: rgb(222, 78, 78);
-    margin-top: 4%;
+    text-decoration: none;
 }
 
 #news-container {
@@ -86,7 +90,6 @@ html, body {
     text-decoration: none;
     color: #202020;
     margin-left: 80%;
-    
 }
 
 
