@@ -6,11 +6,6 @@ html, body {
     margin: 0%;
 }
 
-#header-container {
-    
-    
-}
-
 .header-img > img {
     max-width: 100%;
     height: auto;
@@ -66,10 +61,6 @@ html, body {
     text-align: center;
 }
 
-.latestnews-text > h2 {
-
-}
-
 #latest-news {
     display: flex;
     justify-content: space-around;
@@ -81,6 +72,11 @@ html, body {
     height: 400px;
     margin: 2%;
     border-radius: 16px;
+}
+
+.news > p {
+    color: #202020;
+    padding: 10%;
 }
 
 
