@@ -1,6 +1,8 @@
 html, body {
     background-color: #303030;
     color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
     margin: 0%;
 }
 
@@ -13,11 +15,13 @@ html, body {
     max-width: 100%;
     height: auto;
     
+    
 }
 
 .header-text {
-
-position: absolute;
+    color: #303030;
+    position: absolute;
+    margin-left: 50%;
 
 }
 
@@ -35,7 +39,43 @@ position: absolute;
     color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
-    
-
 }
 
+#info-container {
+    color: #303030;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-us {
+    background-color: rgb(222, 78, 78);
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 16px;
+}
+
+.latest-news {
+    background-color: rgb(222, 78, 78);
+    width: 50%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 16px;
+}
+
+.latest-news > p {
+    text-align: right;
+    margin-top: 22%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer > p {
+    text-align: right;
+    margin: 1%;
+}
