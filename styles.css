@@ -19,7 +19,7 @@ html, body {
 }
 
 .header-text {
-    color: #303030;
+    color: #232323;
     position: absolute;
     margin-left: 50%;
 
@@ -41,6 +41,48 @@ html, body {
     text-decoration: none;
 }
 
+#welcome-container {
+    font-size: 24px;
+    text-align: center;
+    padding: 2% 15%;
+    margin-bottom: 0%;
+}
+
+.welcome-text {
+    margin-bottom: 0%;
+}
+
+.community-text {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.joinus-text {
+    color: rgb(222, 78, 78);
+    margin-top: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for use if u want it like u first told me
 #info-container {
     color: #303030;
     display: flex;
@@ -74,6 +116,7 @@ html, body {
 .text-center {
     text-align: center;
 }
+*/
 
 footer > p {
     text-align: right;
