@@ -91,8 +91,49 @@ html, body {
     color: #202020;
 }
 
+
+
+/* FORUM */
+
 .forum-text {
+    color: #202020;
     position: absolute;
+}
+
+.dropdown-nav {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu > a {
+    background-color: #202020;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu > a:hover {
+    background-color: #202020;
+    color: #FFFFFF;
+}
+
+#dropdown-container:hover .dropdown-menu {
+    display: block;
+
+}
+
+#dropdown-container:hover #dropdown-btn {
+    background-color: #202020;
+    color: #FFFFFF;
 }
 
 
