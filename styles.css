@@ -16,7 +16,7 @@ html, body {
 .header-text {
     color: #202020;
     position: absolute;
-    margin-left: 50%;
+    margin-left: 20%;
 
 }
 
@@ -61,16 +61,16 @@ html, body {
     text-decoration: none;
 }
 
-#news-container {
+#event-container {
     text-align: center;
 }
 
-#latest-news {
+#event-news {
     display: flex;
     justify-content: space-around;
 }
 
-.news {
+.event {
     background-color: rgb(222, 78, 78);
     display: flex;
     flex-direction: column;
@@ -80,15 +80,8 @@ html, body {
     border-radius: 16px;
 }
 
-.news > p {
-    color: #202020;
+.event > iframe {
     padding: 10%;
-}
-
-.more-text > a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #202020;
 }
 
 
