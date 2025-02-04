@@ -7,17 +7,17 @@ html, body {
 }
 
 .header-img > img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     
     
 }
 
-.header-text {
+.header-text {              /* Ikke rettet */
     color: #202020;
     position: absolute;
-    margin-left: 20%;
-
+    text-align: center;
+    align-content: center;
 }
 
 #nav-container {
