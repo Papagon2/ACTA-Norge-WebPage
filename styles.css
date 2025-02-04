@@ -180,6 +180,6 @@ html, body {
 */
 
 footer > p {
-    text-align: right;
-    margin: 1%;
+    text-align: center;
+    margin: 0%;
 }
