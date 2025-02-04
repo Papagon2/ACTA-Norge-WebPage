@@ -37,6 +37,9 @@ html, body {
     text-decoration: none;
 }
 
+.nav-bar > p {
+    color: #9b9b9b;
+}
 .dropdown-menu {
     display: none;
     position: absolute;
