@@ -7,17 +7,17 @@ html, body {
 }
 
 .header-img > img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     
     
 }
 
-.header-text {
+.header-text {              /* Ikke rettet */
     color: #202020;
     position: absolute;
-    margin-left: 20%;
-
+    text-align: center;
+    align-content: center;
 }
 
 #nav-container {
@@ -37,6 +37,9 @@ html, body {
     text-decoration: none;
 }
 
+.nav-bar > p {
+    color: #9b9b9b;
+}
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -180,6 +183,6 @@ html, body {
 */
 
 footer > p {
-    text-align: right;
-    margin: 1%;
+    text-align: center;
+    margin: 0%;
 }
