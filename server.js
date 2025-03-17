@@ -3,6 +3,7 @@ const https = require('https');
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const PORT_HTTP = 80;
 const PORT_HTTPS = 443;
@@ -19,19 +20,49 @@ try {
     console.warn("⚠️ SSL files not found yet.");
 }
 
-// ====== HTTPS SERVER ======
 const app = express();
 
 // Serve static files and .well-known folder
 app.use(express.static(__dirname));
 app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 
-// Default route for your website
+// ====== MEMBERS PROXY ======
+app.use('/Members', (req, res, next) => {
+    console.log(`Proxying Members → http://127.0.0.1:8080${req.url}`);
+    next();
+});
+app.use('/Members', createProxyMiddleware({
+    target: 'http://127.0.0.1:8080',
+    changeOrigin: true,
+    pathRewrite: (path, req) => `/Members${req.url}`,
+}));
+
+// ====== FORUM PROXY ======
+app.use('/Forum', (req, res, next) => {
+    console.log(`Proxying Forum → http://127.0.0.1:8080${req.url}`);
+    next();
+});
+app.use('/Forum', createProxyMiddleware({
+    target: 'http://127.0.0.1:8080',
+    changeOrigin: true,
+    pathRewrite: (path, req) => `/Forum${req.url}`,
+}));
+
+// Default route for your homepage
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Start HTTPS server (port 443)
+// SEO files
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+// HTTPS SERVER
 if (options.key && options.cert) {
     https.createServer(options, app).listen(PORT_HTTPS, '0.0.0.0', () => {
         console.log(`✅ HTTPS server running at https://ACTA-Norge.ddns.net`);
@@ -40,16 +71,12 @@ if (options.key && options.cert) {
     console.log("⚠️ HTTPS server not running yet. Waiting for SSL certificate.");
 }
 
-// ====== HTTP SERVER FOR REDIRECT ======
+// HTTP → HTTPS Redirect
 const redirectApp = express();
-
-// Redirect ALL HTTP requests to HTTPS
 redirectApp.use((req, res) => {
     const redirectUrl = `https://${req.headers.host}${req.url}`;
     res.redirect(301, redirectUrl);
 });
-
-// Start HTTP redirect server (port 80)
 http.createServer(redirectApp).listen(PORT_HTTP, '0.0.0.0', () => {
     console.log(`🔄 HTTP redirect server running at http://ACTA-Norge.ddns.net → HTTPS`);
 });

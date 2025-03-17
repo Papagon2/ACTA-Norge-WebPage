@@ -1,25 +1,147 @@
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+/* GENERAL LAYOUT */
+body {
+    background-color: #202020;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.dropdown-menu > a {
-    background-color: #202020;
-    color: #FFFFFF;
-    padding: 12px 16px;
+/* HEADER */
+header {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    color: rgb(222, 78, 78);
+    margin-bottom: 0.5rem;
+}
+
+/* NAVIGATION */
+#nav-container {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#nav-container a {
+    color: #fff;
     text-decoration: none;
-    display: block;
+    font-weight: bold;
 }
 
-.dropdown-menu > a:hover {
-    background-color: #202020;
+#nav-container a:hover {
     color: rgb(222, 78, 78);
 }
 
-.nav-bar:hover .dropdown-menu {
+/* MAIN CONTENT AREA */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+}
+
+/* TOPICS LIST */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #333;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: #3d3d3d;
+}
+
+ul li a {
+    color: rgb(222, 78, 78);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li span {
     display: block;
+    color: #aaa;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* FORMS */
+form textarea, form input, form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    background: #3c3c3c;
+    color: #f0f0f0;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #aaa;
+}
+
+form button {
+    background-color: rgb(222, 78, 78);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #b73838;
+}
+
+/* HEADINGS */
+h2, h3, h4 {
+    color: rgb(222, 78, 78);
+    margin-bottom: 1rem;
+}
+
+/* REPLIES (inside view_topic.php) */
+.reply {
+    background: #333;
+    padding: 0.8rem;
+    border-radius: 5px;
+    margin-bottom: 0.7rem;
+}
+
+.reply strong {
+    color: rgb(222, 78, 78);
+}
+
+hr {
+    border: 1px solid #444;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    ul li {
+        padding: 0.6rem;
+    }
 }

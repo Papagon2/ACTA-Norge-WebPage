@@ -1,94 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html, body {
+    scroll-padding-top: 60px;
     background-color: #202020;
     color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    margin: 0%;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
 }
 
+/* HEADER IMAGE */
 .header-img > img {
     width: 100%;
     height: auto;
-    
-    
+    display: block;
+    margin-bottom: 0;
 }
 
-.header-text {              /* Ikke rettet */
-    color: #202020;
-    position: absolute;
-    text-align: center;
-    align-content: center;
-}
-
+/* NAVIGATION */
 #nav-container {
     background-color: black;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    padding: 0% 5% 0% 5%;
-    margin-top: -0.5%;
-
-
+    padding: 0.1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    flex-wrap: wrap;
 }
 
-.nav-bar > p >  a {
+.nav-bar {
+    position: relative;
+    margin: 0.5rem;
+}
+
+.nav-bar:hover > .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.nav-bar > p > a, .nav-bar > p {
     color: #FFFFFF;
-    
     text-decoration: none;
+    margin: 0;
+    cursor: pointer;
 }
 
-.nav-bar > p {
-    color: #9b9b9b;
-}
+/* Make sure dropdown sits tight below */
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    top: 100%; /* Stick right under the nav-bar */
+    left: 0;
+    background-color: #202020;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 0.3rem 0;
 }
 
 .dropdown-menu > a {
-    background-color: #202020;
     color: #FFFFFF;
-    padding: 12px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-menu > a:hover {
-    background-color: #202020;
+    background-color: #333;
     color: rgb(222, 78, 78);
 }
 
-.nav-bar:hover .dropdown-menu {
-    display: block;
-}
 
+/* MAIN SECTIONS */
 #welcome-container {
     font-size: 24px;
     text-align: center;
-    padding: 2% 15%;
-    margin-bottom: 0%;
-}
-
-.welcome-text {
-    margin-bottom: 0%;
-}
-
-.community-text {
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
-
-.joinus-text {
-    margin-top: 5%;
+    padding: 4% 10%;
 }
 
 .joinus-text > a {
     color: rgb(222, 78, 78);
     text-decoration: none;
+    font-weight: bold;
 }
 
 #event-container {
@@ -97,6 +92,7 @@ html, body {
 
 #event-news {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -104,9 +100,9 @@ html, body {
     background-color: rgb(222, 78, 78);
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 300px;
     height: 400px;
-    margin: 2%;
+    margin: 1rem;
     border-radius: 16px;
 }
 
@@ -114,76 +110,39 @@ html, body {
     padding: 10%;
 }
 
-
-
-/* FORUM */
-
-.forum-text {
-    color: #202020;
-    position: absolute;
-}
-
-/* Contact */
-
-.contactA {
-    color: #202020;
-    position: absolute;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* for use if u want it like u first told me
-#info-container {
-    color: #303030;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.about-us {
-    background-color: rgb(222, 78, 78);
-    text-align: center;
-    width: 50%;
-    height: 200px;
-    margin: 2%;
-    padding: 2%;
-    border-radius: 16px;
-}
-
-.latest-news {
-    background-color: rgb(222, 78, 78);
-    width: 50%;
-    margin: 2%;
-    padding: 2%;
-    border-radius: 16px;
-}
-
-.latest-news > p {
-    text-align: right;
-    margin-top: 22%;
-}
-
-.text-center {
-    text-align: center;
-}
-*/
-
+/* FOOTER */
 footer > p {
     text-align: center;
-    margin: 0%;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+}
+
+/* 🔹 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    #nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 5%;
+    }
+    .nav-bar {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+    .dropdown-menu {
+        position: static;
+        border: none;
+        background-color: #111;
+        width: 100%;
+    }
+    .dropdown-menu > a {
+        padding: 10px;
+    }
+    #welcome-container {
+        padding: 2% 5%;
+        font-size: 20px;
+    }
+    .event {
+        width: 90%;
+        height: auto;
+    }
 }

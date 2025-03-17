@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="Img/Acta Logo.png" type="image/x-icon">
-    <title>ACTA Norway Members</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- members folder styles -->
+    <link rel="shortcut icon" href="../Img/Acta Logo.png" type="image/x-icon">
+    <title>ACTA Norway | Medlemmer</title>
 </head>
+
 <body>
     <header>
         <div id="header-container">
             <div class="header-img">
-                <img src="/Img/ACTANorway.png" alt="ACTA Norways header picture">
+                <img src="/Img/ACTA-Logo-bred.png" alt="ACTA Norway Logo">
             </div>
         </div>
+    </header>
 
-        <div id="nav-container">
-            <div class="nav-bar">
-                <p>
-                    <a href="../index.html">HJEM</a>
-                </p>
-            </div>
-            <div class="nav-bar">
-                <p>
-                    <a href="../Forum/forum.html">FORUM</a>
-                </p>
-            </div>
-            <div class="nav-bar">
-                <p>
-                MEDLEMMER
-                </p>
-            </div>
-            <div class="nav-bar">
-                <p>
-                    <a href="../Contact/contact.html">KONTAKT OSS</a>
-                </p>
-            </div>
-        </header>
+    <nav id="nav-container">
+        <div class="nav-bar"><a href="../index.html">HJEM</a></div>
+        <div class="nav-bar"><a href="../Forum/forum.php">FORUM</a></div>
+        <div class="nav-bar"><a href="members_list.php">MEDLEMMER</a></div>
+        <div class="nav-bar"><a href="../Contact/contact.html">KONTAKT OSS</a></div>
+    </nav>
+
+    <main>
+        <section id="member-actions">
+            <h2>Medlemsområde</h2>
+            <a href="register.php"><button id="register-btn">Registrer deg</button></a>
+            <a href="login.php"><button id="login-btn">Logg inn</button></a>
+            <a href="members_list.php"><button>Se Medlemsliste</button></a>
+            <a href="profile.php"><button>Min Profil</button></a>
+            <a href="logout.php"><button>Logg ut</button></a>
+        </section>
+    </main>
 </body>
+
 </html>

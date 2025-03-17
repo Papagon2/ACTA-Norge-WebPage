@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="Img/Acta Logo.png" type="image/x-icon">
     <title>ACTA Norway Contact</title>
 </head>
@@ -11,11 +12,12 @@
     <header>
         <div id="header-container">
             <div class="header-img">
-                <img src="/Img/ACTANorway.png" alt="ACTA Norways header picture">
+                <img src="/Img/ACTA-Logo-bredd.png" alt="ACTA Norways header picture">
             </div>
         </div>
+    </header>
 
-        <div id="nav-container">
+        <nav id="nav-container">
             <div class="nav-bar">
                 <p>
                     <a href="../index.html">HJEM</a>
@@ -36,15 +38,39 @@
                 KONTAKT OSS
                 </p>
             </div>
-        </header>
+        </nav>
     
-    <main>
-        <div id="contactA">
-            <div class="header-img">
-                <img src="/Img/ACTA-Logo-bred.png">
-                <p class="Contact-us">KONTAKT OSS</p>
-            </div>
-        </div>
-    </main>
+        <main>
+            <section id="contact-container">
+                <h2>KONTAKT OSS</h2>
+                <p><strong>Dette vil sende en mail til <a href="mailto:stianjeb@gmail.com">stianjeb@gmail.com</a>, leder av Acta-Norway.</strong></p>
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <form action="https://formsubmit.co/stianjeb@gmail.com" method="POST" class="contact-form">
+                        <!-- Add this hidden field for redirect -->
+                        <input type="hidden" name="_next" value="https://acta-norge.ddns.net/contact-thankyou.html">
+                    
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="message">Melding:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                        <button type="submit">Send melding</button>
+                    </form>
+                            
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <p><strong>Discord:</strong> <a href="https://discord.gg/hsnNKfcdag">ACTA-Norway Discord</a> Anbefalt om du trenger svar fortere.</p>
+                        <p><strong>E-post:</strong> <a href="mailto:stianjeb@gmail.com">stianjeb@gmail.com</a></p>
+                        <p><strong>Adresse:</strong> Norway</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
 </body>
 </html>
